@@ -12,29 +12,37 @@ in html
 <!-- This is the head -->
 <!-- All styles and javascript go inside the head -->
     <head>
-       <title>Sign Up Page</title>
+       
+      
        <!-- Compressed CSS -->
        <link rel="stylesheet" href="css/styles.css">
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
        <!-- JS, Popper.js, and jQuery -->
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        
-        
     </head>
 <!-- closing head -->
 
     <!-- This is the body -->
     <!-- This is where we place the content of our website -->
     <body>
+      <div class="container">
+         <div class="row centered-form">
+            <div class="col-sm-8 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                      
+                       </div>
+                       <div class="panel-body">
        <h1>Sign Up</h1>
       <form id="signupForm" method="GET" action="welcome.html">
-         First Name:   <input type="text" name="fName"><br>
-         Last Name:    <input type="text" name="lName"><br>
-         Gender:       <input type="radio" name="gender" value="m">Male<br>
-                        <input type="radio" name=gender" vale="f">Female<br><br>
          
-         Zip Code:      <input type="text" name="zip" id="zip"><br>
+      <div class="form-group"><input type="text" name="fName" class="form-control input-sm" placeholder="First Name"></div><br>
+      <div class="form-group"><input type="text" name="lName" class="form-control input-sm" placeholder="Last Name"></div><br>
+         Gender:       <input type="radio" name="gender" value="m">Male
+                        <input type="radio" name=gender" vale="f">Female<br><br>
+
+      <div class="form-group"><input type="text" name="zip" id="zip" class="form-control input-sm" placeholder="Zip Code"><br>
          City:          <span id="city"></span><br>
          Latitude:      <span id="latitude"></span><br>
          Longitude:     <span id="longitude"></span><br>
@@ -42,15 +50,16 @@ in html
 
          Select a County: <select id="county"></select><br><br>
 
-         Desired Username: <input type="text" id="username" name="username"><br>
+         <div class="form-group"></div><input type="text" id="username" name="username" class="form-control input-sm" placeholder="Desired Username"><br>
                            <span id="usernameError"></span><br>
-         Password:         <input type="password" id="password" name="password"><br>
-         Password Again:   <input type="password" id="passwordAgain"><br>
+         <div class="form-group"><input type="password" id="password" name="password" class="form-control input-sm" placeholder="Password"></div><br>
+         <div class="form-group"><input type="password" id="passwordAgain" class="form-control input-sm" placeholder="Password Again"><br></div>
                            <span id="passwordAgainError"></span><br/><br>
                            <span id="passwordLengthError"></span><br/><br>
          
-         <input type="submit" value="Sign up!">
+         <input type="submit" value="Sign up!" class="btn btn-info btn-block">
       </form>
+
                      
         <!-- This is the footer -->
         <!-- The footer goes inside the body but not always -->
@@ -168,7 +177,18 @@ in html
          
 
       </script>
+                       </div>
+                       </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+     </div>
     </body>
     <!-- closing body -->
+    
+   
+   
 
 </html>
