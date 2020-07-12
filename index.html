@@ -42,7 +42,8 @@ in html
          Gender:       <input type="radio" name="gender" value="m">Male
                         <input type="radio" name=gender" vale="f">Female<br><br>
 
-      <div class="form-group"><input type="text" name="zip" id="zip" class="form-control input-sm" placeholder="Zip Code"><br>
+      <div class="form-group"><input type="text" name="zip" id="zip" class="form-control input-sm" placeholder="Zip Code">
+         <span id="noZip"></span><br>
          City:          <span id="city"></span><br>
          Latitude:      <span id="latitude"></span><br>
          Longitude:     <span id="longitude"></span><br>
@@ -80,10 +81,18 @@ in html
                dataType: "json",
                data: { "zip": $("#zip").val()},
                success: function(result,status) {
-                        // alert(result.city);
-                        $("#city").html(result.city);
-                        $("#latitude").html(result.latitude);
-                        $("#longitude").html(result.longitude);
+                        // alert(result)
+                        if(result == false){
+                           $("#noZip").html("No Zipcode Available")
+                        }
+                        else{
+                           $("#noZip").html("")
+                           $("#city").html(result.city);
+                           $("#latitude").html(result.latitude);
+                           $("#longitude").html(result.longitude);
+                           
+                        }
+                        
 
                } 
             });//ajax
